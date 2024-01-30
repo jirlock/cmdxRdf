@@ -1,0 +1,33 @@
+@prefix voc: <http://utcmdx.ac.jp/vocabulary/> .
+@base <http://utcmdx.ac.jp/resource/>.
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<hongo/building/eng/10>
+        a               voc:Building ;
+        rdfs:label      "工学部10号館" ;
+        voc:area        200 ;
+        voc:floor       5 ;
+        voc:hasPart     <hongo/building/eng/10/floor/1> ;
+        voc:hasPart     <hongo/building/eng/10/floor/2> .
+
+<hongo/building/eng/10/floor/1>
+        a               voc:Floor ;
+        rdfs:label      "1階" ;
+        voc:isPartOf    <hongo/building/eng/10> ;
+        voc:hasPart     <hongo/building/eng/10/room/1> .
+
+<hongo/building/eng/10/floor/2>
+        a               voc:Floor ;
+        rdfs:label      "2階" ;
+        voc:isPartOf    <hongo/building/eng/10> .
+
+<hongo/building/eng/10/room/1>
+        a               voc:Room ;
+        rdfs:label      "エントランス" ;
+        voc:isPartOf    <hongo/building/eng/10/floor/1> ;
+        voc:capacity    50 ;
+        voc:occupancy   10 .
+
