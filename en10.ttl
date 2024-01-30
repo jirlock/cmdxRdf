@@ -1,33 +1,54 @@
-@prefix voc: <http://utcmdx.ac.jp/vocabulary/> .
-@base <http://utcmdx.ac.jp/resource/>.
+@prefix voc: <http://utcmdx.ac.jp/vocabulary#> .
+@base <http://utcmdx.ac.jp/resource#>.
 
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix brick: <http://www.brickschema.org/schema/Brick#> .
+@prefix rec:   <http://www.w3id.org/rec#> .
 
+<hongo/building/eng/1>
+        a               rec:Building ;
+        rdfs:label      "工学部1号館" ;
+        rec:area        200 ;
+        rec:floor       5 ;
+        rec:hasPart     <hongo/building/eng/1/floor/1> ;
+        rec:hasPart     <hongo/building/eng/1/floor/2> ;
+        rec:ownedBy     202.
 
-<hongo/building/eng/10>
-        a               voc:Building ;
-        rdfs:label      "工学部10号館" ;
-        voc:area        200 ;
-        voc:floor       5 ;
-        voc:hasPart     <hongo/building/eng/10/floor/1> ;
-        voc:hasPart     <hongo/building/eng/10/floor/2> .
+<hongo/building/eng/1/floor/b1>
+        a               rec:Level ;
+        rdfs:label      "地下1階" ;
+        rec:isPartOf    <hongo/building/eng/1> ;
 
-<hongo/building/eng/10/floor/1>
-        a               voc:Floor ;
+<hongo/building/eng/1/floor/1>
+        a               rec:Level ;
         rdfs:label      "1階" ;
-        voc:isPartOf    <hongo/building/eng/10> ;
-        voc:hasPart     <hongo/building/eng/10/room/1> .
+        rec:isPartOf    <hongo/building/eng/1> ;
+        rec:hasPart     <hongo/building/eng/1/room/1> .
 
-<hongo/building/eng/10/floor/2>
-        a               voc:Floor ;
+<hongo/building/eng/1/floor/2>
+        a               rec:Level ;
         rdfs:label      "2階" ;
-        voc:isPartOf    <hongo/building/eng/10> .
+        rec:isPartOf    <hongo/building/eng/1> .
 
-<hongo/building/eng/10/room/1>
-        a               voc:Room ;
+<hongo/building/eng/1/floor/3>
+        a               rec:Level ;
+        rdfs:label      "3階" ;
+        rec:isPartOf    <hongo/building/eng/1> .
+
+
+<hongo/building/eng/1/floor/4>
+        a               rec:Level ;
+        rdfs:label      "3階" ;
+        rec:isPartOf    <hongo/building/eng/4> .
+
+<hongo/building/eng/1/floor/5>
+        a               rec:Level ;
+        rdfs:label      "2階" ;
+        rec:isPartOf    <hongo/building/eng/5> .
+
+<hongo/building/eng/1/room/1>
+        a               rec:Room ;
         rdfs:label      "エントランス" ;
-        voc:isPartOf    <hongo/building/eng/10/floor/1> ;
-        voc:capacity    50 ;
-        voc:occupancy   10 .
+        rec:isPartOf    <hongo/building/eng/1/floor/1> .
 

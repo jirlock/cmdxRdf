@@ -1,0 +1,62 @@
+@prefix voc: <http://utcmdx.ac.jp/vocabulary#> .
+@prefix bldg: <http://utcmdx.ac.jp/resource/building/hongo/en01#> .
+@prefix lvl: <http://utcmdx.ac.jp/resource/level/hongo/en01#> .
+@prefix room: <http://utcmdx.ac.jp/resource/room/hongo/en01#> .
+@base <http://utcmdx.ac.jp/resource/#>.
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix brick: <http://www.brickschema.org/schema/Brick#> .
+@prefix rec:   <http://www.w3id.org/rec#> .
+
+#Building
+bldg:
+        a               rec:Building ;
+        rdfs:label      "工学部1号館" ;
+        rec:area        200 ;
+        rec:floor       5 ;
+        rec:hasPart     lvl:b01 ;
+        rec:hasPart     lvl:01 ;
+        rec:hasPart     lvl:02 ;
+        rec:hasPart     lvl:03 ;
+        rec:hasPart     lvl:04 ;
+        rec:hasPart     lvl:05 ;
+        rec:ownedBy     "東京大学" .
+
+#Level
+lvl:b01
+        a               rec:Level ;
+        rdfs:label      "地下1階" ;
+        rec:isPartOf    bldg: .
+
+lvl:01
+        a               rec:Level ;
+        rdfs:label      "1階" ;
+        rec:isPartOf    bldg: ;
+        rec:hasPart     room:1 .
+
+lvl:02
+        a               rec:Level ;
+        rdfs:label      "2階" ;
+        rec:isPartOf    bldg: .
+
+lvl:03
+        a               rec:Level ;
+        rdfs:label      "3階" ;
+        rec:isPartOf    bldg: .
+
+lvl:04
+        a               rec:Level ;
+        rdfs:label      "4階" ;
+        rec:isPartOf    bldg: .
+
+lvl:05
+        a               rec:Level ;
+        rdfs:label      "5階" ;
+        rec:isPartOf    bldg: .
+
+#Room
+room:1
+        a               rec:Room ;
+        rdfs:label      "エントランス" ;
+        rec:isPartOf    lvl:01 .
