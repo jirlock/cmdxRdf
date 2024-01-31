@@ -60,3 +60,9 @@ room:1
         a               rec:Room ;
         rdfs:label      "エントランス" ;
         rec:isPartOf    lvl:01 .
+
+room:2
+        a               rec:Room;
+        rdfs:label      "ロビー";
+        rec:isPartOf    lvl:01 .
+

@@ -1,17 +1,19 @@
-@prefix voc: <http://utcmdx.ac.jp/vocabulary#> .
 @base <http://utcmdx.ac.jp/resource#>.
+@prefix voc: <http://utcmdx.ac.jp/vocabulary#> .
+@prefix bldg: <http://utcmdx.ac.jp/resource/building#> .
+@prefix lvl: <http://utcmdx.ac.jp/resource/level#> .
 
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix brick: <http://www.brickschema.org/schema/Brick#> .
 @prefix rec:   <http://www.w3id.org/rec#> .
 
-<hongo/building/eng/1>
+bldg:en10
         a               rec:Building ;
         rdfs:label      "工学部1号館" ;
         rec:area        200 ;
         rec:floor       5 ;
-        rec:hasPart     <hongo/building/eng/1/floor/1> ;
+        rec:hasPart      ;
         rec:hasPart     <hongo/building/eng/1/floor/2> ;
         rec:ownedBy     202.
 
